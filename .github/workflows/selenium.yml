@@ -31,6 +31,7 @@ jobs:
 
       - name: Install Chrome 134.0.6998.165 manually
         run: |
+          sudo rm -f /usr/bin/google-chrome                # drop the stock link/binary
           wget https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/134.0.6998.165/linux64/chrome-linux64.zip -O chrome.zip
           unzip chrome.zip
           sudo mv chrome-linux64 /opt/chrome
